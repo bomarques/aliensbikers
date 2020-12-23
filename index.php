@@ -10,9 +10,9 @@ include_once("conexao.php");
                 <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
 		
 	</head>
-	<body>
+	<body><div class="container">
 		<header><a href="cad_usuario.php">Cadastrar usuário</a><br>
-		<h1>Listar usuários</h1></header>
+		<h1>Ranking UCAlliens</h1></header>
 		<?php
 		if(isset($_SESSION['msg'])){
 			echo $_SESSION['msg'];
@@ -29,7 +29,7 @@ include_once("conexao.php");
 		//calcular o inicio visualização
 		$inicio = ($qnt_result_pg * $pagina) - $qnt_result_pg;
 		
-		$result_usuarios = "SELECT * FROM usuarios LIMIT $inicio, $qnt_result_pg";
+		$result_usuarios = "SELECT * FROM ciclistas LIMIT $inicio, $qnt_result_pg";
 		$resultado_usuarios = mysqli_query($conn, $result_usuarios);
 		while($row_usuario = mysqli_fetch_assoc($resultado_usuarios)){?>
             <table id="editableTable" class="table">
@@ -37,17 +37,19 @@ include_once("conexao.php");
 		<tr>
 			<th>#</th>
 			<th>Nome</th>
-			<th>Email</th>
-			<th>Cadastrado</th>													
+			<th>Apelido</th>
+			<th>Instagram</th>
+			<th>Pontuação</th>													
 		</tr>
 	</thead>
 	<tbody>
 		<?php while( $row_usuario = mysqli_fetch_assoc($resultado_usuarios) ) { ?>
 		   <tr id="<?php echo $row_usuario ['id']; ?>">
-		   <td   width=10 height=2><?php echo $row_usuario ['id']; ?></td>
+		   <td  width=10 height=2><?php echo $row_usuario ['id']; ?></td>
 		   <td  width=25 height=2><?php echo $row_usuario ['nome']; ?></td>
-		   <td  width=25 height=2><?php echo $row_usuario ['email']; ?></td>
-		   <td  width=25 height=2><?php echo $row_usuario ['created']; ?></td>  				   				   				  
+		   <td  width=25 height=2><?php echo $row_usuario ['apelido']; ?></td>
+		   <td  width=25 height=2><?php echo $row_usuario ['instagram']; ?></td>
+		   <td  width=25 height=2><?php echo "<a href='edit_usuario.php?id=" . $row_usuario['id'] . "'>Editar</a>"; ?></td>				   				   				  
 		   </tr>
 		<?php } ?>
 	</tbody>
@@ -119,5 +121,5 @@ include_once("conexao.php");
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-	</body>
+		</div></body>
 </html>

@@ -6,7 +6,7 @@ $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
 $apelido = filter_input(INPUT_POST, 'apelido', FILTER_SANITIZE_STRING);
-$instagram = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
+$instagram = filter_input(INPUT_POST, 'instagram', FILTER_SANITIZE_STRING);
 $nascimento = filter_input(INPUT_POST, 'nascimento', FILTER_SANITIZE_STRING);
 
 
