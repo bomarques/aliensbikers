@@ -33,7 +33,7 @@ $row_usuario = mysqli_fetch_assoc($resultado_usuario);
 			</div>
 			<div class="col-md-6">
 				<label for="inputPassword" class="form-label">Senha</label>
-				<input type="password" name="senha" class="form-control" id="inputPassword">
+				<input type="password" name="senha" class="form-control" value="<?php echo $row_usuario['senha']; ?> id="inputPassword">
 			</div>
 			<div class="col-md-6">
 				<label for="inputName" class="form-label">Nome</label>
@@ -50,6 +50,10 @@ $row_usuario = mysqli_fetch_assoc($resultado_usuario);
 			<div class="col-md-6">
 				<label for="inputBirthday" class="form-label">Data de Nascimento</label>
 				<input type="date" name="nascimento" class="form-control" value="<?php echo $row_usuario['nascimento']; ?>" id="inputBirthday" placeholder="">
+			</div>
+			<div class="col-md-6">
+				<label for="inputScore" class="form-label">Pontuação</label>
+				<input type="text" name="pontuacao" class="form-control" value="<?php echo $row_usuario['pontuacao']; ?>" id="inputScore" placeholder="">
 			</div>
 			<div class="col-12">
 				<input type="submit" value="Editar" class="btn btn-primary">
