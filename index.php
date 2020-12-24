@@ -31,7 +31,7 @@ include_once("conexao.php");
 		
 		$result_usuarios = "SELECT * FROM ciclistas LIMIT $inicio, $qnt_result_pg";
 		$resultado_usuarios = mysqli_query($conn, $result_usuarios);
-		while($row_usuario = mysqli_fetch_assoc($resultado_usuarios)){?>
+		?>
             <table id="editableTable" class="table">
 	<thead>
 		<tr>
@@ -49,7 +49,7 @@ include_once("conexao.php");
 		   <td  width=25 height=2><?php echo $row_usuario ['nome']; ?></td>
 		   <td  width=25 height=2><?php echo $row_usuario ['apelido']; ?></td>
 		   <td  width=25 height=2><?php echo $row_usuario ['instagram']; ?></td>
-		   <td  width=25 height=2><?php echo "<a href='edit_usuario.php?id=" . $row_usuario['id'] . "'>Editar</a>"; ?></td>				   				   				  
+		   <td  width=25 height=2><?php echo "<a href='edit_usuario.php?id=" . $row_usuario['id'] . "'>Editar</a> | <a href='proc_apagar_usuario.php?id=" . $row_usuario['id'] . "'>Apagar</a>"; ?></td>				   				   				  
 		   </tr>
 		<?php } ?>
 	</tbody>
@@ -63,7 +63,6 @@ include_once("conexao.php");
 			echo "<a href='edit_usuario.php?id=" . $row_usuario['id'] . "'>Editar</a> |  ";
 			echo "<a href='proc_apagar_usuario.php?id=" . $row_usuario['id'] . "'>Apagar</a><br><hr>"; -->
 
-		<?php } ?>
 
                         
                         
@@ -92,7 +91,7 @@ include_once("conexao.php");
     <li class="page-item"><a class="page-link"<?php echo "href='index.php?pagina=$quantidade_pg'"?>>Ultima</a></li>
   </ul>
 </nav>   
-                        
+                      
                         
               <?php          
 		echo "<a href='index.php?pagina=1'>Primeira</a> ";

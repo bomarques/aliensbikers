@@ -7,8 +7,7 @@ session_start();
 <head>
 	<meta charset="utf-8">
 	<title>CRUD - Cadastrar</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
@@ -35,20 +34,20 @@ session_start();
 				<input type="password" name="senha" class="form-control" id="inputPassword4">
 			</div>
 			<div class="col-md-6">
-				<label for="inputEmail4" class="form-label">Nome</label>
-				<input type="text" name="nome" class="form-control" id="inputAdress2">
+			<label for="inputName" class="form-label">Nome</label>
+				<input type="text" name="nome" class="form-control" id="inputName">
 			</div>
 			<div class="col-md-6">
 				<label for="inputPassword4" class="form-label">Apelido</label>
-				<input type="text" name="apelido" class="form-control" id="inputAdress2">
+				<input type="text" name="apelido" class="form-control" id="inputNickname">
 			</div>
 			<div class="col-md-6">
 				<label for="inputEmail4" class="form-label">Instagram</label>
-				<input type="url" name="instagram" class="form-control" id="inputAdress2" placeholder="Link do instagram">
+				<input type="url" name="instagram" class="form-control" id="inputProfile" placeholder="Link do instagram">
 			</div>
 			<div class="col-md-6">
 				<label for="inputEmail4" class="form-label">Data de Nascimento</label>
-				<input type="date" name="nascimento" class="form-control" id="inputAdress2" placeholder="">
+				<input type="date" name="nascimento" class="form-control" id="inputBirthday" placeholder="">
 			</div>
 			<div class="col-12">
 				<button type="submit" value="Cadastrar" class="btn btn-primary">Cadastrar</button>

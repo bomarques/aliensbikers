@@ -11,7 +11,7 @@ $row_usuario = mysqli_fetch_assoc($resultado_usuario);
 	<head>
 		<meta charset="utf-8">
 		<title>CRUD - Editar</title>
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
 	
 	</head>
 	<body><div class="container"><header>		<a href="cad_usuario.php">Cadastrar ciclista</a><br>
@@ -28,36 +28,34 @@ $row_usuario = mysqli_fetch_assoc($resultado_usuario);
 <form class="row g-3" method="POST" action="proc_edit_usuario.php">
 			<input type="hidden" name="id" value="<?php echo $row_usuario['id']; ?>">
 			<div class="col-md-6">
-				<label for="inputEmail4" class="form-label">Email</label>
-				<input type="email" name="email" class="form-control" value="<?php echo $row_usuario['email']; ?>" id="inputEmail4">
+				<label for="inputEmail" class="form-label">Email</label>
+				<input type="email" name="email" class="form-control" value="<?php echo $row_usuario['email']; ?>" id="inputEmail">
 			</div>
 			<div class="col-md-6">
-				<label for="inputPassword4" class="form-label">Senha</label>
-				<input type="password" name="senha" class="form-control" id="inputPassword4">
+				<label for="inputPassword" class="form-label">Senha</label>
+				<input type="password" name="senha" class="form-control" id="inputPassword">
 			</div>
 			<div class="col-md-6">
-				<label for="inputEmail4" class="form-label">Nome</label>
-				<input type="text" name="nome" class="form-control" value="<?php echo $row_usuario['nome']; ?>"id="inputAdress2">
+				<label for="inputName" class="form-label">Nome</label>
+				<input type="text" name="nome" class="form-control" value="<?php echo $row_usuario['nome']; ?>"id="inputName">
 			</div>
 			<div class="col-md-6">
-				<label for="inputPassword4" class="form-label">Apelido</label>
-				<input type="text" name="apelido" class="form-control" value="<?php echo $row_usuario['apelido']; ?>" id="inputAdress2">
+				<label for="inputNickname" class="form-label">Apelido</label>
+				<input type="text" name="apelido" class="form-control" value="<?php echo $row_usuario['apelido']; ?>" id="inputNickname">
 			</div>
 			<div class="col-md-6">
-				<label for="inputEmail4" class="form-label">Instagram</label>
-				<input type="url" name="instagram" class="form-control" value="<?php echo $row_usuario['instagram']; ?>" id="inputAdress2" placeholder="Link do instagram">
+				<label for="inputProfile" class="form-label">Instagram</label>
+				<input type="url" name="instagram" class="form-control" value="<?php echo $row_usuario['instagram']; ?>" id="inputProfile" placeholder="Link do instagram">
 			</div>
 			<div class="col-md-6">
-				<label for="inputEmail4" class="form-label">Data de Nascimento</label>
-				<input type="date" name="nascimento" class="form-control" value="<?php echo $row_usuario['nascimento']; ?>" id="inputAdress2" placeholder="">
+				<label for="inputBirthday" class="form-label">Data de Nascimento</label>
+				<input type="date" name="nascimento" class="form-control" value="<?php echo $row_usuario['nascimento']; ?>" id="inputBirthday" placeholder="">
 			</div>
 			<div class="col-12">
 				<input type="submit" value="Editar" class="btn btn-primary">
 			</div>
 		</form>
-		<!-- como era
-			
-		<section><form method="POST" action="proc_edit_usuario.php">
+		<!--<form method="POST" action="proc_edit_usuario.php">
 			<input type="hidden" name="id" value="<?php// echo $row_usuario['id']; ?>">
 			
 			<label>Nome: </label>
@@ -67,6 +65,6 @@ $row_usuario = mysqli_fetch_assoc($resultado_usuario);
 			<input type="email" name="email" placeholder="Digite o seu melhor e-mail" value="<?php //echo $row_usuario['email']; ?>"><br><br>
 			
 			<input type="submit" value="Editar">
-		</form></section> -->
+		</form> -->
 	</div></body>
 </html>

@@ -10,11 +10,14 @@ $apelido = filter_input(INPUT_POST, 'apelido', FILTER_SANITIZE_STRING);
 $instagram = filter_input(INPUT_POST, 'instagram', FILTER_SANITIZE_STRING);
 $nascimento = filter_input(INPUT_POST, 'nascimento', FILTER_SANITIZE_STRING);
 
-//echo "Nome: $nome <br>";
-//echo "E-mail: $email <br>";
-
-$result_usuario = "UPDATE ciclistas SET nome='$nome', email='$email', senha='$senha', apelido='$apelido', instagram='$instagram', nascimento='$nascimento', modified=NOW() WHERE id='$id'";
+/*Teste para ver se recebeu valores
+echo "ID: $id <br>";
+echo "Nome: $nome <br>";
+echo "E-mail: $email <br>";
+*/
+$result_usuario = "UPDATE ciclistas SET nome='$nome', email='$email', instagram='$instagram', nascimento='$nascimento', senha='$senha', apelido='$apelido', modificado=NOW() WHERE id='$id'";
 $resultado_usuario = mysqli_query($conn, $result_usuario);
+
 
 if(mysqli_affected_rows($conn)){
 	$_SESSION['msg'] = "<p style='color:green;'>Usuário editado com sucesso</p>";
