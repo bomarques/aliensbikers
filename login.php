@@ -1,3 +1,4 @@
+<!-- Formulário de Login -->
 <?php
 session_start();
 ?>
@@ -32,15 +33,13 @@ session_start();
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a href="cad_usuario.php" class="nav-link">
-             Cadastrar
-            </a>
+            <a href="cad_usuario.php" class="nav-link">Cadastrar</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <div class="page-header" data-parallax="true" style="background-image: url('assets/img/mtbcad.jpg')">
+  <div class="page-header" data-parallax="true" style="background-image: url('assets/img/mtblog.jpg')">
     <div class="container">
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto">
@@ -55,57 +54,32 @@ session_start();
   <div class="main main-raised">
     <div class="container">
       <div class="section text-center">
-
-			<?php
-			if (isset($_SESSION['msg'])) {
-				echo $_SESSION['msg'];
-				unset($_SESSION['msg']);
-			}
-			?>
-	
-
-		<form class="row g-3" method="POST" action="proc_cad_usuario.php">
+<form class="row g-3" method="POST" action="validacao.php">
+    <legend>Dados de Login</legend>
 			<div class="col-md-6">
 				<label for="inputEmail4" class="form-label">Email</label>
 				<input type="email" name="email" class="form-control" id="inputEmail4">
 			</div>
 			<div class="col-md-6">
-				<label for="inputPassword" class="form-label">Senha</label>
-				<input type="password" name="senha" class="form-control" id="inputPassword">
+				<label for="inputPassword4" class="form-label">Senha</label>
+				<input type="password" name="senha" class="form-control" id="inputPassword4">
+			</div><div class="col-12">
+				<button type="submit" value="Entrar" name="but_submit"class="btn btn-primary">Entrar</button>
+			</div></form>
 			</div>
-			<div class="col-md-6">
-			<label for="inputName" class="form-label">Nome</label>
-				<input type="text" name="nome" class="form-control" id="inputName">
-			</div>
-			<div class="col-md-6">
-				<label for="inputPassword4" class="form-label">Apelido</label>
-				<input type="text" name="apelido" class="form-control" id="inputNickname">
-			</div>
-			<div class="col-md-6">
-				<label for="inputEmail4" class="form-label">Instagram</label>
-				<input type="url" name="instagram" class="form-control" id="inputProfile" placeholder="Link do instagram">
-			</div>
-			<div class="col-md-6">
-				<label for="inputEmail4" class="form-label">Data de Nascimento</label>
-				<input type="date" name="nascimento" class="form-control" id="inputBirthday" placeholder="">
-			</div>
-			<div class="col-12">
-				<button type="submit" value="Cadastrar" class="btn btn-primary">Cadastrar</button>
-			</div>
-		</form>
-
-		</div>
     </div>
   </div>
   <footer class="footer footer-default">
     <div class="container">
-      <nav class="float-left">Parcerias: <a href="https://www.instagram.com/aliensbikersssp/">Instagram</a>&nbsp;ou&nbsp;<a href="mailto:aliensbikers@gmail.com">Email</a>
+      <nav class="float-left">
+
+          Parcerias: <a href="https://www.instagram.com/aliensbikersssp/">Instagram</a>&nbsp;ou&nbsp;<a href="mailto:aliensbikers@gmail.com">Email</a>
       </nav>
       <div class="copyright float-right">
         &copy;
         <script>
           document.write(new Date().getFullYear())
-        </script> Aliens Bikers SSP by
+        </script>Aliens Bikers SSP by
         <a href="https://www.linkedin.com/in/bruno-marques-39709a1a3/" target="blank">Bruno</a>.
       </div>
     </div>

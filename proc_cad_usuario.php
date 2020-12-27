@@ -10,9 +10,11 @@ $instagram = filter_input(INPUT_POST, 'instagram', FILTER_SANITIZE_STRING);
 $nascimento = filter_input(INPUT_POST, 'nascimento', FILTER_SANITIZE_STRING);
 
 
-
-//echo "Nome: $nome <br>";
-//echo "E-mail: $email <br>";
+/*
+testar se esta recebendo os valores
+echo "Nome: $nome <br>";
+echo "E-mail: $email <br>";
+*/
 
 $result_usuario = "INSERT INTO ciclistas (nome, email, instagram, nascimento, senha, apelido, criado) VALUES ('$nome', '$email','$instagram','$nascimento','$senha','$apelido', NOW())";
 $resultado_usuario = mysqli_query($conn, $result_usuario);
